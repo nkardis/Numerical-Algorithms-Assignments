@@ -9,7 +9,8 @@ def lin_fib(k):
         return a + b, a
 
 def kth_Lucas(k):
-    """ Uses recursive linear fibonnaci sequence by taking n - 1 and n + 1 of fib sequence to calculate
+    """ Uses recursive linear fibonnaci sequence by taking 
+        n - 1 and n + 1 of fib sequence to calculate
         the next lucas number in the sequence"""
     if k == 1:
         return 2
@@ -21,12 +22,17 @@ def kth_Lucas(k):
 def Q1():
     f = open("q1_in.txt", "r")
     raw = Stack()
+    # First line in file is number of Lucas numbers 
+    # to be calculated.
     iter = int(f.readline().strip("\n"))
+    # Use a stack to store the Ln values
     for i in range(iter):
         raw.push(int(f.readline().strip("\n")))
     f.close()
 
     ans = open("q1_out.txt", "w")
+    # Since stack is FILO, the Lucas numbers come out reverse order
+    # Without having to reverse the output
     for i in range(iter):
         ans.write(f"{kth_Lucas(raw.pop())}\n")
     ans.close()

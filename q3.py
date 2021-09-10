@@ -70,9 +70,10 @@ def Q3():
             ans.close()
             return
               
-        # Takes the current position of the knight and loops through all moves the knight can make
-        # Then checks if the move is within the bounds of the chess board (0,0) -> (7,7).
-        # And if the position on the board has not already been visited. Then sets board position
+        # Takes the current position of the knight and loops through 
+        # all moves the knight can make then checks if the move is within 
+        # the bounds of the chess board (0,0) -> (7,7). And if the position 
+        # on the board has not already been visited. Then sets board position 
         # to visited and enqueues the new position of the knight.
         for i in range(len(k_move)):
             candidate = s + k_move[i]
@@ -81,4 +82,3 @@ def Q3():
                 moves.enqueue(candidate)   
                                  
 Q3()
-

@@ -12,10 +12,9 @@ def Q5():
     f = open("q5_in.txt", "r")
     carts = f.readline().strip("\n")
     raw = f.readline().split(" ")
-    list = [int(i) for i in raw]
-    heap = heapsort(list)
+    li = [int(i) for i in raw]
+    heap = heapsort(li)
     f.close()
-    
 
     while True:
         # Creates two temp variables of first items in the heapsorted list

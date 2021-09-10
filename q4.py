@@ -47,10 +47,8 @@ def Q4():
         # priority employee is dequeued and written to the text file
         elif job == PRINT and printable(prints, max_prints):
             out = str(requests.dequeue()[1])
-            ans.write(f"{out}")
+            ans.write(f"{out}\n")
             prints += 1
-            if printable(prints + 1, max_prints):
-                ans.write("\n")
     f.close()
     ans.close()
         

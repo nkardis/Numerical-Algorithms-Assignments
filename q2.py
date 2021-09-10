@@ -36,7 +36,6 @@ def Q2():
     f = open("q2_in.txt", "r")
     exp_stack = Stack()
     while True:
-        print(exp_stack)
         c = next_entry(f)
         if c == "":
             break
